@@ -52,11 +52,21 @@ if (isset($messages)) {
 }
 ?>
 
-<?php if (isset($result)){ ?>
+<?php if (isset($result) && $operation == 'kredyt'){ ?>
 <div style="margin-top: 1em; padding: 1em; border-radius: 0.5em; background-color: #ff0; width:25em;">
-<?php echo 'Wynik: '.$result; ?>
+    
+<?php echo 'Miesięczna rata wynosi: '.$result; ?>
+</div>   
+<?php } ?>
+   
+<?php if (isset($result) && $operation == 'lokata'){ ?>
+<div style="margin-top: 1em; padding: 1em; border-radius: 0.5em; background-color: #ff0; width:25em;">
+<?php echo 'Roczny zysk z lokaty wynosi: '.$result; ?>
+    
+    
 </div>
 <?php } ?>
+
 
 </div>
 
